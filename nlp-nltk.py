@@ -528,18 +528,34 @@ with tab2:
         st.subheader("🔠 Vectorization & Modeling")
 
         # Vectorizer selection (pill-style)
+
+        # Max Features Slider
+        MAX_FEATURES = st.slider(
+            "🔢 Max Features for Vectorizer",
+            min_value=500,
+            max_value=20000,
+            value=5000,
+            step=500,
+            help="Limit the number of features to prevent performance issues."
+        )
+        
+        # Vectorizer selection (pill-style)
         vectorizer_choice = st.radio(
             "🔘 Choose Vectorizer",
             options=["Count Vectorizer", "TF-IDF Vectorizer"],
             index=0,
             horizontal=True
         )
+        
         if st.button("Enter"):
-            # Select and apply the vectorizer
+            # Select and apply the vectorizer with the chosen max_features
             if vectorizer_choice == "Count Vectorizer":
-                vectorizer = CountVectorizer()
+                vectorizer = CountVectorizer(max_features=MAX_FEATURES)
             else:
-                vectorizer = TfidfVectorizer()
+                vectorizer = TfidfVectorizer(max_features=MAX_FEATURES)
+        
+            st.success(f"{vectorizer_choice} initialized with max {MAX_FEATURES} features.")
+
 
             # Vectorize the Processed Text
             X = vectorizer.fit_transform(final_df["Processed_Text"])

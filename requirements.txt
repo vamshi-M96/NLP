@@ -1,0 +1,23 @@
+# Core
+numpy
+pandas
+scikit-learn
+matplotlib
+streamlit
+
+# NLP
+nltk
+wordcloud
+textblob
+
+# File Handling
+docx2txt
+PyPDF2
+
+# ML Models
+xgboost
+lightgbm
+
+# Optional PDF/text support
+openpyxl  # For XLSX file support in pandas
+doc2docx  # If converting DOC to DOCX is used

@@ -96,7 +96,7 @@ def run_nlp_filepath_mode():
        ......
     
         #### ⚠️ Notes:
-        - All files should be placed directly inside the ZIP — **no subfolders**.
+        - All files should be placed directly inside the ZIP .
         - For `.xlsx` or `.csv` files, make sure they have at least **one column with text**. You’ll select this column during processing.
         - Large ZIPs may take longer to process depending on system performance.
     

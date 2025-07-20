@@ -349,3 +349,18 @@ def run_nlp_csv_upload_mode():
                                 st.error(f"❌ ValueError: {ve}")
         else:
             st.warning("⚠️ Please train and select a model in Tab 0 first.")
+
+
+
+st.markdown(
+    """
+    <hr style="margin-top: 50px;">
+    <div style="text-align: center; color: grey; font-size: 20px;">
+        🧠 <strong>Automated Natural Language Processing (NLP) App</strong> by 
+        <a href="https://www.linkedin.com/in/meka-vamshi-/" target="_blank" style="color: blue; text-decoration: none;">
+            <strong>Vamshi</strong>
+        </a> | Built with Streamlit 💻
+    </div>
+    """,
+    unsafe_allow_html=True
+)

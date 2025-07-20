@@ -70,7 +70,7 @@ STOP_WORDS = set(stopwords.words('english'))
 
 def run_nlp_filepath_mode():
 
-    @st.cache_data(show_spinner=False)
+    #@st.cache_data(show_spinner=False)
     def handle_zip_upload():
         zip_file = st.file_uploader("📁 Upload a zipped folder", type=["zip"])
         if zip_file:

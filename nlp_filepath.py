@@ -70,6 +70,34 @@ STOP_WORDS = set(stopwords.words('english'))
 
 def run_nlp_filepath_mode():
 
+    with st.expander("📦 How to Prepare Your ZIP File for NLP Folder Mode"):
+    st.markdown("""
+    #### ✅ Supported File Types
+    - **PDF** (`.pdf`)
+    - **Word Docs** (`.docx`)
+    - **Text Files** (`.txt`)
+    - **Excel/CSV** (`.xlsx`, `.csv`)
+
+    #### 📁 Folder/ZIP Structure
+    Upload a **ZIP file or folder** with the following flat structure (no subfolders):
+
+    ```
+    my_docs.zip
+    ├── resume1.pdf
+    ├── jobdesc.docx
+    ├── feedback.txt
+    ├── reviews.xlsx
+    ```
+
+    #### ⚠️ Notes:
+    - All files should be placed directly inside the ZIP — **no subfolders**.
+    - For `.xlsx` or `.csv` files, make sure they have at least **one column with text**. You’ll select this column during processing.
+    - Large ZIPs may take longer to process depending on system performance.
+
+    #### 💡 Tip:
+    You can prepare your folder, right-click → "Send to ZIP", and upload it here.
+    """)
+
     #@st.cache_data(show_spinner=False)
     def handle_zip_upload():
         zip_file = st.file_uploader("📁 Upload a zipped folder", type=["zip"])

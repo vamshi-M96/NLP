@@ -63,7 +63,7 @@ if not mode_selected:
 
 # --- Folder Workflow ---
 if mode_selected == "folder":
-    st.header("📁 Folder-Based Classification")
+    st.header("🤐 Zip-File-Based Classification")
        
     try:
         from nlp_filepath import run_nlp_filepath_mode

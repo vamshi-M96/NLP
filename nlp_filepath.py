@@ -470,6 +470,8 @@ def run_nlp_filepath_mode():
         if not df.empty:
             st.success("✅ Data loaded!")
             st.write(df)
+            st.session_state.df = df
+            
             # Ask user to select columns if not default
             all_cols = df.columns.tolist()
             content_col = st.selectbox("📝 Select Content/Text Column", all_cols, index=0)

@@ -83,11 +83,17 @@ def run_nlp_filepath_mode():
     
         ```
         my_docs.zip
-        ├── resume1.pdf
-        ├── jobdesc.docx
-        ├── feedback.txt
-        ├── reviews.xlsx
-        ```
+        ├──Category A
+            ├── resume1.pdf
+            ├── resume2.pdf
+        ├──Category B
+            ├── resume1.pdf
+            ├── resume2.docx
+        ├──Category C
+            ├── resume1.pdf
+            ├── resume2.txt
+       .......
+       ......
     
         #### ⚠️ Notes:
         - All files should be placed directly inside the ZIP — **no subfolders**.

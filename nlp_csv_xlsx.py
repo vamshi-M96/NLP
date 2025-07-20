@@ -352,6 +352,10 @@ def run_nlp_csv_upload_mode():
 
 
 
+# Push space for footer
+st.markdown("<br><br><br><br>", unsafe_allow_html=True)
+
+# Sticky footer
 st.markdown("""
     <style>
     .footer {
@@ -360,16 +364,20 @@ st.markdown("""
         width: 100%;
         margin-top: 50px;
         padding: 10px 0;
-        color: grey;
-        font-size: 20px;
+        font-size: 16px;
         text-align: center;
+        color: grey;
+    }
+    .footer a {
+        color: blue;
+        text-decoration: none;
     }
     </style>
 
     <div class="footer">
         🧠 <strong>Automated Natural Language Processing (NLP) App</strong> by 
-        <a href="https://www.linkedin.com/in/meka-vamshi-/" target="_blank" style="color: blue; text-decoration: none;">
+        <a href="https://www.linkedin.com/in/meka-vamshi-/" target="_blank">
             <strong>Vamshi</strong>
         </a> | Built with Streamlit 💻
     </div>
-    """, unsafe_allow_html=True)
+""", unsafe_allow_html=True)

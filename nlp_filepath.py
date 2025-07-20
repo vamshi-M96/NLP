@@ -73,13 +73,13 @@ def run_nlp_filepath_mode():
     def text_clean(text):
         
         text = text.lower()
-        text = re.sub('\n', '', text)
-        text = re.sub('\t', '', text)
-        text = re.sub('\[.]', '', text)
-        text = re.sub('\[*!?\]', '', text)
-        text = re.sub('[%s]' % re.escape(string.punctuation), '', text)
-        text = re.sub('\w*\d\w*', '', text)
-        text = re.sub('[‘’“”…]', '', text)
+        text = re.sub(r'\n', '', text)
+        text = re.sub(r'\t', '', text)
+        text = re.sub(r'\[.]', '', text)
+        text = re.sub(r'\[*!?\]', '', text)
+        text = re.sub(r'[%s]' % re.escape(string.punctuation), '', text)
+        text = re.sub(r'\w*\d\w*', '', text)
+        text = re.sub(r'[‘’“”…]', '', text)
         return text
     clean = lambda x: text_clean(x)
 

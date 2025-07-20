@@ -93,7 +93,7 @@ if mode_selected == "file":
 st.markdown(
     """
     <hr style="margin-top: 50px;">
-    <div style="text-align: center; color: grey; font-size: 14px;">
+    <div style="text-align: center; color: grey; font-size: 20px;">
         🧠 <strong>Automated Natural Language Processing (NLP) App</strong> by 
         <a href="https://www.linkedin.com/in/meka-vamshi-/" target="_blank" style="color: blue; text-decoration: none;">
             <strong>Vamshi</strong>

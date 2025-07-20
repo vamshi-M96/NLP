@@ -48,8 +48,8 @@ if not mode_selected:
     with col1:
         st.markdown("""
             <a href="?mode=folder" class="glass-card">
-                <div class="card-icon">📁</div>
-                Folder Path <br>(PDF / DOCX / TXT)
+                <div class="card-icon">🤐</div>
+                Zip-File Path <br>(PDF / DOCX / TXT)
             </a>
         """, unsafe_allow_html=True)
 

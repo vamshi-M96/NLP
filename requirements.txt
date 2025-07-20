@@ -1,23 +1,27 @@
-# Core
-numpy
-pandas
-scikit-learn
-matplotlib
+# Core App Dependencies
 streamlit
+pandas
+numpy
 
-# NLP
-nltk
-wordcloud
-textblob
-
-# File Handling
-docx2txt
-PyPDF2
-
-# ML Models
+# Machine Learning
+scikit-learn
 xgboost
 lightgbm
 
-# Optional PDF/text support
+# Text Processing & NLP
+nltk
+textblob
+wordcloud
+
+# File Parsing
+docx2txt
+PyPDF2
+openpyxl
+
+# Optional: for .doc to .docx conversion (used in nlp_filepath.py)
+doc2docx
+
+# Visualization
+matplotlib
 openpyxl  # For XLSX file support in pandas
-doc2docx  # If converting DOC to DOCX is used
+

@@ -89,17 +89,24 @@ if mode_selected == "file":
 
 
 
+st.markdown("""
+    <style>
+    .footer {
+        position: relative;
+        bottom: 0;
+        width: 100%;
+        margin-top: 50px;
+        padding: 10px 0;
+        color: grey;
+        font-size: 20px;
+        text-align: center;
+    }
+    </style>
 
-st.markdown(
-    """
-    <hr style="margin-top: 50px;">
-    <div style="text-align: center; color: grey; font-size: 20px;">
+    <div class="footer">
         🧠 <strong>Automated Natural Language Processing (NLP) App</strong> by 
         <a href="https://www.linkedin.com/in/meka-vamshi-/" target="_blank" style="color: blue; text-decoration: none;">
             <strong>Vamshi</strong>
         </a> | Built with Streamlit 💻
     </div>
-    """,
-    unsafe_allow_html=True
-)
-
+    """, unsafe_allow_html=True)

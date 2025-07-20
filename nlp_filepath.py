@@ -1,6 +1,7 @@
 # Standard library
 import os
 import re
+import zipfile
 import numpy as np
 import time
 import string
@@ -69,6 +70,15 @@ STOP_WORDS = set(stopwords.words('english'))
 
 def run_nlp_filepath_mode():
 
+    @st.cache_data(show_spinner=False)
+    def handle_zip_upload():
+        zip_file = st.file_uploader("📁 Upload a zipped folder", type=["zip"])
+        if zip_file:
+            with zipfile.ZipFile(zip_file, 'r') as zip_ref:
+                extract_path = "unzipped"
+                zip_ref.extractall(extract_path)
+                return extract_path
+        return None
 
     def text_clean(text):
         
@@ -460,8 +470,8 @@ def run_nlp_filepath_mode():
 
     with tab1:
 
-        
-        folder_path = st.text_input("Enter folder path:(containing `.pdf`, `.docx`, or `.txt`)")
+        folder_path = handle_zip_upload()
+        #folder_path = st.text_input("Enter folder path:(containing `.pdf`, `.docx`, or `.txt`)")
         if folder_path and os.path.exists(folder_path):
             convert_to_docx(folder_path)
             df = extract_from_folder(folder_path)

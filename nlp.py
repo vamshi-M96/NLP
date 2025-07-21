@@ -96,6 +96,15 @@ if not mode_selected:
             Zero-Shot Classification<br>(No Training Needed)
         </a>
         """, unsafe_allow_html=True)
+        
+    with ocol3:
+        st.markdown("""
+        <a href="?mode=toxicity_detection" class="glass-card">
+            <div class="card-icon">⚠️</div>
+            <strong>Toxicity Detection</strong><br>
+            (Hate Speech & Abuse)
+        </a>
+        """, unsafe_allow_html=True)
 
 
 
@@ -149,6 +158,14 @@ if mode_selected == "zero_shot":
     try:
         from zero_shot import run_zero_shot
         run_zero_shot()
+    except Exception as e:
+        st.error(f"❌ Error: {e}")
+
+if mode_selected == "toxicity":
+    st.header("🛡️ Toxicity / Hate Speech Detection")
+    try:
+        from toxicity_detection import run_toxicity_detection
+        run_toxicity_detection()
     except Exception as e:
         st.error(f"❌ Error: {e}")
 

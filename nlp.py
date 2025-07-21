@@ -88,6 +88,16 @@ if not mode_selected:
         </a>
         """, unsafe_allow_html=True)
 
+    ocol1, ocol2, ocol3, ocol4 = st.columns(4)
+    with ocol1:
+        st.markdown("""
+        <a href="?mode=zero_shot" class="glass-card">
+            <div class="card-icon">🚀</div>
+            Zero-Shot Classification<br>(No Training Needed)
+        </a>
+        """, unsafe_allow_html=True)
+
+
 
 # --- Folder Workflow ---
 if mode_selected == "folder":
@@ -134,6 +144,13 @@ if mode_selected == "sentiment":
     except Exception as e:
         st.error(f"❌ Error: {e}")
 
+if mode_selected == "zero_shot":
+    st.header("🧾 Zero shot")
+    try:
+        from zero_shot import run_zero_shot
+        run_zero_shot()
+    except Exception as e:
+        st.error(f"❌ Error: {e}")
 
 
 

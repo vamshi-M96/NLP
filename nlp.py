@@ -161,7 +161,7 @@ if mode_selected == "zero_shot":
     except Exception as e:
         st.error(f"❌ Error: {e}")
 
-if mode_selected == "toxicity":
+if mode_selected == "toxicity_detection":
     st.header("🛡️ Toxicity / Hate Speech Detection")
     try:
         from toxicity_detection import run_toxicity_detection

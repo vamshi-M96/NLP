@@ -1,27 +1,23 @@
-# Core App Dependencies
+# --- Core ---
 streamlit
 pandas
 numpy
 
-# Machine Learning
+# --- Machine Learning ---
 scikit-learn
 xgboost
 lightgbm
 
-# Text Processing & NLP
+# --- Text Processing & NLP ---
 nltk
 textblob
 wordcloud
 
-# File Parsing
+# --- File Parsing ---
 docx2txt
 PyPDF2
 openpyxl
+doc2docx  # Optional: for converting .doc to .docx
 
-# Optional: for .doc to .docx conversion (used in nlp_filepath.py)
-doc2docx
-
-# Visualization
+# --- Visualization ---
 matplotlib
-openpyxl  # For XLSX file support in pandas
-

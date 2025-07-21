@@ -1,40 +1,52 @@
-# 🧠 Automated Natural Language Processing (NLP) App
+# 🤖 Auto NLP App with Streamlit
 
-A Streamlit-based web app that allows users to upload raw text files or document datasets (PDF, DOCX, TXT, XLSX), preprocess the text using **NLTK**, visualize word patterns, train classification models using **TF-IDF** or **CountVectorizer**, and generate predictions — all in an interactive interface.
+![Streamlit](https://img.shields.io/badge/Built%20with-Streamlit-blueviolet?logo=streamlit)  
+A powerful, user-friendly **NLP automation tool** built with **Streamlit**. Easily analyze, clean, classify, and interpret text from documents or datasets — no coding required.
 
----
-
-## 🚀 Features
-
-- 📂 **Multi-format File Input**:
-  - Supports uploading files or folders in PDF, DOCX, TXT, and XLSX format.
-- 🧹 **Text Preprocessing**:
-  - Clean text, remove stopwords, punctuation, digits, symbols
-  - NLTK-based tokenization, lemmatization, and POS tagging
-- ☁️ **Word Cloud Visualization**
-  - Generates a word cloud from cleaned text
-- 🧠 **Model Training & Evaluation**:
-  - Train multiple models (Logistic Regression, Random Forest, SVC, XGBoost, LGBM, KNN, etc.)
-  - Vectorize using **CountVectorizer** or **TF-IDF**
-  - Auto model comparison with accuracy scores
-- 🧾 **Prediction Module**:
-  - Upload new text files for single or batch prediction using trained model
-- 💾 **Model Download**:
-  - Save and export trained models for deployment
+## 🚀 Live App
+👉 [Launch the App](https://autonlp-app.streamlit.app/)  
+👉 [Source Code on GitHub](https://github.com/vamshi-M96/NLP/)
 
 ---
 
-## 🧰 Tech Stack
+## 📌 Features
 
-- **Python 3.8+**
-- **Streamlit**
-- **NLTK**
-- **scikit-learn**
-- **XGBoost / LightGBM**
-- **Matplotlib / WordCloud**
-- **PyPDF2 / docx2txt / Pandas**
+### 🔍 Input Modes
+- 📁 **Folder Input**: Upload a directory with PDF, DOCX, TXT files
+- 📄 **File Upload**: Upload single PDF, DOCX, TXT, CSV, or XLSX
+- 🧮 **CSV/XLSX Input**: Load data for classification or regression
+
+### 🧹 Text Preprocessing
+- Cleaning (punctuation, stopwords, special chars)
+- Tokenization (NLTK)
+- Lemmatization
+- POS Tagging
+- NER (Named Entity Recognition)
+- Word Cloud Generation
+
+### 🤖 NLP Modeling
+- **Text Classification** (multi-model)
+  - Logistic Regression
+  - Random Forest
+  - SVM
+  - Naive Bayes
+  - XGBoost, LGBM, etc.
+- **Text Regression**
+- **Vectorization**: CountVectorizer / TF-IDF
+- **Auto Model Comparison**
+- **Model Download**
+
+### 🧠 Sentiment & Toxicity Detection
+- Sentiment Analysis (TextBlob / Rule-based)
+- Toxicity Detection (BERT-based `unitary/toxic-bert`)
+
+### 🧪 Prediction Modes
+- 📄 Single Text Prediction
+- 📁 Batch Prediction from uploaded data
 
 ---
 
 ## 📂 Folder Structure
+
+
 

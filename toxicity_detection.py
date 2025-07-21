@@ -6,7 +6,7 @@ def load_toxicity_model():
     return pipeline("text-classification", model="unitary/toxic-bert", return_all_scores=True)
 
 def run_toxicity_detection():
-    st.title("🛡️ Toxicity / Hate Speech Detection")
+    #st.title("🛡️ Toxicity / Hate Speech Detection")
 
     model = load_toxicity_model()
 

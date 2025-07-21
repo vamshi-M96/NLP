@@ -4,34 +4,39 @@ import os
 # --- Page Config ---
 st.set_page_config(page_title="🧠 NLP Launcher", layout="wide", page_icon="🧠")
 
-# --- CSS for Glass Cards ---
+
+
+# 💅 CSS for circular cards
 st.markdown("""
-    <style>
-    .glass-card {
-        background: rgba(63, 81, 181, 0.25);
-        border-radius: 16px;
-        padding: 2rem;
-        text-align: center;
-        backdrop-filter: blur(10px);
-        -webkit-backdrop-filter: blur(10px);
-        box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.2);
-        color: White !important;
-        font-weight: bold;
-        font-size: 1.3rem;
-        transition: all 0.2s ease-in-out;
-        cursor: pointer;
-        text-decoration: none;
-        display: block;
-    }
-    .glass-card:hover {
-        transform: scale(1.05);
-        background: rgba(244, 67, 54, 0.25);
-    }
-    .card-icon {
-        font-size: 3rem;
-        margin-bottom: 1rem;
-    }
-    </style>
+<style>
+.glass-card {
+    width: 400px;
+    height: 400px;
+    border: 5px solid rgba(156, 39, 176, 0.8);;
+    border-radius: 80%;
+    background: rgba(0, 0, 0, 0);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    text-decoration: none;
+    color: inherit;
+    font-size: 1.9rem;
+    font-weight: 600;
+    padding: 0.5rem;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+.glass-card:hover {
+    background: rgba(63, 81, 181, 0.25);
+    transform: scale(1.07);
+}
+.card-icon {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+</style>
 """, unsafe_allow_html=True)
 
 # --- Get Mode from URL ---
@@ -43,7 +48,7 @@ st.markdown("<p style='text-align: center; color: #aaa;'>Select your input type 
 
 # --- Card Selection ---
 if not mode_selected:
-    col1, col2 = st.columns(2)
+    col1, col2, col3 = st.columns(3)
 
     with col1:
         st.markdown("""
@@ -58,6 +63,13 @@ if not mode_selected:
             <a href="?mode=file" class="glass-card">
                 <div class="card-icon">📄</div>
                 CSV / Excel File <br>(Text + Label)
+            </a>
+        """, unsafe_allow_html=True)
+    with col3:
+        st.markdown("""
+            <a href="?mode=file_Regression" class="glass-card">
+                <div class="card-icon">🗃️</div>
+                NLP Regression<br>CSV / Excel File <br>(Text + Label)
             </a>
         """, unsafe_allow_html=True)
 
@@ -77,6 +89,18 @@ if mode_selected == "folder":
 # --- File Workflow ---
 if mode_selected == "file":
     st.header("📄 CSV/XLSX File Classification")
+    try:
+        from nlp_csv_xlsx import run_nlp_csv_upload_mode
+        run_nlp_csv_upload_mode()  # 🔥 Let it handle upload + logic internally
+    except Exception as e:
+        st.error(f"❌ Error: {e}")
+
+    if st.button("🔙 Back"):
+        st.query_params.clear()
+
+# --- File Workflow ---
+if mode_selected == "file_Regression":
+    st.header("📄 CSV/XLSX File Regression")
     try:
         from nlp_csv_xlsx import run_nlp_csv_upload_mode
         run_nlp_csv_upload_mode()  # 🔥 Let it handle upload + logic internally

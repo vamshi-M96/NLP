@@ -43,7 +43,7 @@ st.markdown("""
 mode_selected = st.query_params.get("mode", None)
 
 # --- Title ---
-st.markdown("<h1 style='text-align: center;'>🧠 🧠 NLP Studio: Analyze, Train, Predict>", unsafe_allow_html=True)
+st.markdown("<h1 style='text-align: center;'>🧠 NLP Studio: Analyze, Train, Predict>", unsafe_allow_html=True)
 st.markdown("<p style='text-align: center; color: #aaa;'>Select your input type to begin</p>", unsafe_allow_html=True)
 
 # --- Card Selection ---
